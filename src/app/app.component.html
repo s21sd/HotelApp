@@ -1,10 +1,18 @@
 <div>
-    <h1>Hello World !{{title}}</h1>
+    <h1>Hello World !{{count}}</h1>
     <hinv-user-list></hinv-user-list>
     <hinv-login></hinv-login>
     <button (click)="getName('Sunny')">Save</button>
     <br /><br />
     <input type="text" #box (keyup)="getName(box.
     value)" placeholder="Enter the value" />
+    <br /><br />
+
+    <button (click)="Increase('add')">Increase</button>
+    <br /><br />
+    <button (click)="Increase('minus')">Decrease</button>
+
+    <div *ngIf="show">Content to render when condition is true.</div>
+    <button class="btn" (click)="showDiv()">Click Me</button>
 
 </div>
